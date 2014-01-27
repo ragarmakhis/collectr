@@ -67,7 +67,7 @@ if not os.path.exists(txtName):
 	root = tree.getroot()
 	# for elem in root.findall(".//sequence/media/video/track/clipitem/file/name"):
 	# for elem in root.findall(".//VideoTrackVec/Element/Sm2TiTrack/Items/Element/Sm2TiVideoClip/Name"):
-	for elem in root.findall(".//VideoTrackVec/Element/Sm2TiTrack/Items/Element/Sm2TiVideoClip/MediaReelNumber"):
+	for elem in root.findall(xmlPath):
 		# match = re.match("^[A-Z]\d{3}_[A-Z]\d{3}_\d{4}\w{2}.mov", elem.text) # PROXY
 		# match = re.match("^[A-Z]\d{3}_[A-Z]\d{3}_\d{4}\w{2}", elem.text) # RED
 		# match = re.match("^[A-Z]\d{3}[A-Z]\d{3}_\d{4}\w{2}", elem.text) # Alexa
@@ -122,4 +122,3 @@ else if args.list = 'Y':
 	return 0
 
 print 'Found and copied ' + str(lineCount-1) + ' file(s) of ' + str(fileCount)
-
